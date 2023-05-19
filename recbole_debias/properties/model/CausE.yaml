@@ -4,3 +4,5 @@ dis_pen: 0.1
 lambda_1: 1
 lambda_2: 1
 
+INTERVENE_MASK: popular
+LABEL: label

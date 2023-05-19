@@ -75,7 +75,7 @@ class CausE(DebiasedRecommender):
         user = interaction[self.USER_ID]
         item = interaction[self.ITEM_ID]
         label = interaction[self.LABEL]
-        mask = interaction[self.intervene_mask_field]
+        mask = interaction[self.intervene_mask_field].long()
 
         score_control = self.forward(user[~mask], item[~mask], 'control')
         label_control = label[~mask]

@@ -20,7 +20,7 @@ shuffle: True                   # (bool) Whether or not to shuffle the training 
 epochs: 200                     # (int) The number of training epochs.
 train_batch_size: 2048          # (int) The training batch size.
 learner: adam                   # (str) The name of used optimizer.
-learning_rate: 0.001            # (float) Learning rate.
+learning_rate: 0.0001            # (float) Learning rate.
 train_neg_sample_args:          # (dict) Negative sampling configuration for model training.
   distribution: uniform         # (str) The distribution of negative items.
   sample_num: 1                 # (int) The sampled num of negative items.
@@ -44,9 +44,9 @@ eval_args:                      # (dict) 4 keys: group_by, order, split, and mod
   order: RO                     # (str) The ordering strategy ranging in ['RO', 'TO'].
   mode: full                    # (str) The evaluation mode ranging in ['full','unixxx','popxxx','labeled'].
 repeatable: False               # (bool) Whether to evaluate results with a repeatable recommendation scene. 
-metrics: ["Recall","MRR","NDCG","Hit","Precision","GiniIndex"]  # (list or str) Evaluation metrics.
-topk: [10]                      # (list or int or None) The value of k for topk evaluation metrics.
-valid_metric: NDCG@10            # (str) The evaluation metric for early stopping. 
+metrics: ["Recall","NDCG","Hit"]  # (list or str) Evaluation metrics.
+topk: [20]                      # (list or int or None) The value of k for topk evaluation metrics.
+valid_metric: Hit@20            # (str) The evaluation metric for early stopping.
 valid_metric_bigger: True       # (bool) Whether to take a bigger valid metric value as a better result.
 eval_batch_size: 4096           # (int) The evaluation batch size.
 metric_decimal_place: 4         # (int) The decimal place of metric scores.
