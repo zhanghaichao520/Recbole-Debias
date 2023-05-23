@@ -8,8 +8,8 @@ from recbole_debias.quick_start import run_recbole_debias
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', '-m', type=str, default='CausE', help='name of models')
-    parser.add_argument('--dataset', '-d', type=str, default='ml-100k', help='name of datasets')
+    parser.add_argument('--model', '-m', type=str, default='DEBIAS', help='name of models')
+    parser.add_argument('--dataset', '-d', type=str, default='jester', help='name of datasets')
     parser.add_argument('--config_files', '-c', type=str, default=None, help='config files')
 
     args, _ = parser.parse_known_args()

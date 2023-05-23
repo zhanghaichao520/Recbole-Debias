@@ -85,9 +85,9 @@ class DEBIAS(DebiasedRecommender):
         self.apply(xavier_normal_initialization)
     def get_user_embedding(self, interaction):
         id_embedding = self.user_id_embedding(interaction[self.USER_ID])
-        age_embedding = self.user_age_embedding(interaction["age_level"].to(torch.int64))
-        gender_embedding = self.user_gender_embedding(interaction["gender"])
-        occupation_embedding = self.user_occupation_embedding(interaction["occupation"])
+        # age_embedding = self.user_age_embedding(interaction["age_level"].to(torch.int64))
+        # gender_embedding = self.user_gender_embedding(interaction["gender"])
+        # occupation_embedding = self.user_occupation_embedding(interaction["occupation"])
         # return (id_embedding + age_embedding + gender_embedding + occupation_embedding) / 4
         return id_embedding
     def get_user_popular_embedding(self, interaction):
